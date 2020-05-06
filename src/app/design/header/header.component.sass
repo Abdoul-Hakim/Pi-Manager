@@ -1,0 +1,57 @@
+@import '../../../assets/stylehelper/stylehelper'
+@import '../../../assets/stylehelper/font'
+
+$midnight-blue: #000A64
+$med-spring: #00FFB0
+$light-coral: #EF6F6C
+$med-aquamarine: #56D2A9
+$max-yr: #FFBA49
+$light-cyan: #D6FFF6
+$turqoise: #37EAD7
+
+@media screen and ( max-width: 450px )
+  #header
+    height: 60px
+    width: 100vw
+    background-color: #30E8D3
+    display: grid
+    grid-template-columns: 15% 70% 15%
+    grid-template-rows: 100%
+
+  #header h1
+    grid-column: 2
+    grid-row: 1
+    display: flex
+    justify-content: center
+    align-self: center
+
+  button
+    grid-column: 1
+    grid-row: 1
+    display: flex
+    justify-content: center
+    background-color: inherit
+    transition-duration: 100ms
+
+  button span
+    transition-duration: 200ms
+
+  button:active
+    background-color: #2BD4BE
+    transition-duration: 50ms
+
+  span:first-child
+    width: 100%
+
+  img:nth-child(3)
+    grid-column: 3
+    grid-row: 1
+    max-width: 50px
+    display: flex
+    align-self: center
+    transform: rotate(40deg)
+
+  .rotate-90
+    transform: rotate(90deg)
+    transition-duration: 200ms
+
