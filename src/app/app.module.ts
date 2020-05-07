@@ -9,6 +9,9 @@ import { HeaderComponent } from './design/header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SystemComponent } from './system/system.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { DebugComponent } from './debug/debug.component';
+import { AppRoutingModule } from './app-routing.module';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -18,14 +21,17 @@ import { ProjectsComponent } from './projects/projects.component';
     AsideBarItemComponent,
     HeaderComponent,
     SystemComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    DebugComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent],
-  exports: [DesignComponent, AsideBarComponent, HeaderComponent, SystemComponent, ProjectsComponent]
+  exports: [DesignComponent, AsideBarComponent, HeaderComponent, SystemComponent, ProjectsComponent, DebugComponent, HomeComponent]
 })
 export class AppModule { }

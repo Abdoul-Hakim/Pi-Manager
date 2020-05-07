@@ -1,3 +1,5 @@
 <div class="item-container">
-  <span [class.selected]="selected == true" class="mp-0 material-icons"> {{barElement.tag}} </span>
+  <a routerLink="{{barElement.path}}" routerLinkActive="active" class="mlink">
+    <span [class.selected]="selected == true" class="mp-0 material-icons"> {{barElement.tag}} </span>
+  </a>
 </div>

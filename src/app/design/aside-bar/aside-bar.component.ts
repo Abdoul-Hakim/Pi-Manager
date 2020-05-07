@@ -9,7 +9,7 @@ import { DesignService } from '../design.service';
   styleUrls: ['./aside-bar.component.sass']
 })
 
-export class AsideBarComponent implements OnInit, OnChanges {
+export class AsideBarComponent implements OnInit {
 
   selected;
   rotated: boolean;
@@ -21,34 +21,29 @@ export class AsideBarComponent implements OnInit, OnChanges {
     new BarElement(
       'system',
       ' memory ',
-      'full'
+      '/system'
     ),
     new BarElement(
       'projects',
       'assignment ',
-      'full'
+      '/projects'
     ),
     new BarElement(
       'debug',
       ' bug_report ',
-      'full'
+      '/debug'
     )
    ];
 
   ngOnInit(): void {
+    //stay updated
     this.$rotator.currentRotation.subscribe(
       rotation => this.rotated = rotation
     );
   }
 
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log(changes);
-
-  }
-
   selectElement( elem: BarElement ){
     this.selected = elem;
-    console.log(this.rotated);
   }
 
 }

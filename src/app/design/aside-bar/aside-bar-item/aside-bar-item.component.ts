@@ -4,7 +4,7 @@ import { BarElement } from '../barElement';
   selector: 'pi-aside-bar-item',
   templateUrl: './aside-bar-item.component.html',
   styleUrls: ['./aside-bar-item.component.sass'],
-  template: ''
+  template:''
 })
 export class AsideBarItemComponent implements OnInit {
 
@@ -17,6 +17,10 @@ export class AsideBarItemComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  getLink(){
+    return this.barElement.path;
   }
 
 }

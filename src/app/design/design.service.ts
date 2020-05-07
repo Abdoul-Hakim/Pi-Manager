@@ -8,6 +8,7 @@ export class DesignService {
 
   private isRotated = false;
 
+  //set value to watch for
   private rotation = new BehaviorSubject(this.isRotated);
   currentRotation = this.rotation.asObservable();
 
@@ -22,6 +23,7 @@ export class DesignService {
   }
 
   changeRotation( rotation: boolean ){
+    //change the value
     this.rotation.next(rotation);
   }
 
