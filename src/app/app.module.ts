@@ -12,6 +12,8 @@ import { ProjectsComponent } from './projects/projects.component';
 import { DebugComponent } from './debug/debug.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
+import { SpecsComponent } from './system/specs/specs.component';
+import { SpecsItemComponent } from './system/specs/specs-item/specs-item.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { HomeComponent } from './home/home.component';
     SystemComponent,
     ProjectsComponent,
     DebugComponent,
-    HomeComponent
+    HomeComponent,
+    SpecsComponent,
+    SpecsItemComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DesignService } from '../design/design.service';
 
 @Component({
   selector: 'pi-system',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SystemComponent implements OnInit {
 
-  constructor() { }
+  rotated: boolean;
+
+  constructor(
+    private $rotator: DesignService
+  ) { }
 
   ngOnInit(): void {
+    //stay updated
+    this.$rotator.currentRotation.subscribe(
+      rotation => this.rotated = rotation
+    );
   }
 
 }

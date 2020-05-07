@@ -1,0 +1,35 @@
+@import '../../../assets/stylehelper/stylehelper'
+@import '../../../assets/stylehelper/font'
+
+$midnight-blue: #000A64
+$med-spring: #00FFB0
+$light-coral: #EF6F6C
+$med-aquamarine: #56D2A9
+$max-yr: #FFBA49
+$light-cyan: #D6FFF6
+$turqoise: #37EAD7
+$header: #30E8D3
+
+@media screen and ( max-width: 450px )
+
+  :host
+
+    button
+      display: grid
+      grid-template-columns: 20% 80%
+      grid-template-rows: 100%
+
+    button span
+      display: inline
+
+    .btn-text
+      grid-column: 2
+      grid-row: 1
+      height: 100%
+      width: 100%
+
+    .sign
+      height: 100%
+      width: 100%
+      grid-column: 1
+      grid-row: 1

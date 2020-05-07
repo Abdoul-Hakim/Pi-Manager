@@ -7,11 +7,11 @@ import { DebugComponent } from './debug/debug.component';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent},
+  { path: '', redirectTo: 'home', pathMatch: 'full'},
+  { path: 'home', component: HomeComponent},
   { path: 'system', component: SystemComponent },
   { path: 'projects', component: ProjectsComponent },
   { path: 'debug', component: DebugComponent }
-
 ]
 
 @NgModule({

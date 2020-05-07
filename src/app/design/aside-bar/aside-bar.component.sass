@@ -9,16 +9,19 @@ $light-cyan: #D6FFF6
 $turqoise: #37EAD7
 
 @media screen and ( max-width: 450px)
-  #aside
+  :host
     height: 100%
-    width: 0%
-    overflow: hidden
-    transition-duration: 200ms
+    width: 100%
+    #aside
+      height: 100%
+      width: 0%
+      overflow: hidden
+      transition-duration: 200ms
 
-  .show
-    transition-duration: 200ms
-    background-color: $light-cyan
-    width: 20% !important
+    .show
+      transition-duration: 200ms
+      background-color: $light-cyan
+      width: 100% !important
 
 
 
