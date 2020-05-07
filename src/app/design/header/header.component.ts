@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter} from '@angular/core';
 import {MatIconModule} from '@angular/material/icon';
+import { DesignService } from '../design.service';
+
 
 @Component({
   selector: 'pi-header',
@@ -8,9 +10,9 @@ import {MatIconModule} from '@angular/material/icon';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
-
   rotate = false;
+
+  constructor( private $rotator: DesignService) {  }
 
   ngOnInit(): void {
   }
@@ -18,9 +20,11 @@ export class HeaderComponent implements OnInit {
   rotateImg(){
     if (this.rotate === true) {
       this.rotate = false;
+      this.$rotator.setRotated(this.rotate);
     }
     else {
       this.rotate = true;
+      this.$rotator.setRotated(this.rotate);
     }
   }
 

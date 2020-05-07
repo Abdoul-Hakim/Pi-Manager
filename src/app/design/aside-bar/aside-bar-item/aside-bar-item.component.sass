@@ -1,0 +1,27 @@
+@import '../../../../assets/stylehelper/font'
+@import '../../../../assets/stylehelper/stylehelper'
+$midnight-blue: #000A64
+$med-aquamarine: #56D2A9
+
+@media screen and ( max-width: 450px )
+  :host
+    height: 100%
+    width: 100%
+
+    .item-container
+      display: flex
+      height: 100px
+      justify-content: space-around
+      align-items: center
+      flex-direction: column
+
+    span
+      font-size: 45px
+      height: fit-content
+      width: fit-content
+      color: $midnight-blue
+      display: inline-block
+
+    .selected
+      color: $med-aquamarine
+

@@ -7,6 +7,8 @@ import { AsideBarComponent } from './design/aside-bar/aside-bar.component';
 import { AsideBarItemComponent } from './design/aside-bar/aside-bar-item/aside-bar-item.component';
 import { HeaderComponent } from './design/header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SystemComponent } from './system/system.component';
+import { ProjectsComponent } from './projects/projects.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     DesignComponent,
     AsideBarComponent,
     AsideBarItemComponent,
-    HeaderComponent
+    HeaderComponent,
+    SystemComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,
@@ -22,6 +26,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   ],
   providers: [],
   bootstrap: [AppComponent],
-  exports: [DesignComponent, AsideBarComponent, HeaderComponent]
+  exports: [DesignComponent, AsideBarComponent, HeaderComponent, SystemComponent, ProjectsComponent]
 })
 export class AppModule { }
