@@ -1,10 +1,9 @@
-<div id="aside"  >
+<div id="aside"  [class.show]="rotated==true" >
   <pi-aside-bar-item
     *ngFor="let elem of barElements"
     [barElement] = "elem"
     [selected] ="selected?.name === elem?.name"
     (click)="selectElement(elem)"
-    [class.show]="rotated==true"
   >
 </pi-aside-bar-item>
 </div>
