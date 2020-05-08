@@ -1,0 +1,49 @@
+@import '../../assets/stylehelper/stylehelper'
+@import '../../assets/stylehelper/font'
+
+$midnight-blue: #000A64
+$med-spring: #00FFB0
+$light-coral: #EF6F6C
+$med-aquamarine: #56D2A9
+$max-yr: #FFBA49
+$light-cyan: #D6FFF6
+$turqoise: #37EAD7
+$header: #30E8D3
+
+@media screen and ( max-width: 450px )
+  :host
+    height: 100%
+    width: 100%
+
+    .container
+      height: 100%
+      width: 100%
+      display: grid
+      grid-template-columns: 20% 80%
+      grid-template-rows: 8% 92%
+
+      pi-header
+        grid-row: 1
+        grid-column-start: 1
+        grid-column-end: 3
+
+      main
+        grid-row: 2
+        grid-column-start: 1
+        grid-column-end: 3
+
+      pi-aside-bar
+        grid-row: 2
+        grid-column: 1
+
+      .set-aside
+        grid-template-colomns: 20% 80% !important
+
+      .set-main-aside
+        grid-column-start: 2 !important
+
+      .gpio-expander
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
