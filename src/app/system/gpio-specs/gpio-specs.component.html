@@ -1,1 +1,37 @@
-<p>gpio-specs works!</p>
+<div class="container">
+  <pi-header></pi-header>
+  <pi-aside-bar [class.set-aside]="rotated == true" ></pi-aside-bar>
+  <main [class.set-main-aside]="rotated == true">
+    <div class="gpio-expander">
+      <div class="gpio-bar ftext" (click)="showGPIO()" >
+        <span [class.rotate-45]="expand == false" class="sign material-icons">
+          expand_more
+        </span>
+        <span class="gpio-bar-text">Show Active GPIO</span>
+      </div>
+      <div *ngFor = "let gpio of gpioList" [class.expand] = "expand == true" class="gpio-spec-container">
+
+        <pi-gpio-spec-item
+        *ngIf = "gpio.status == true"
+        [gpio] = gpio
+        ></pi-gpio-spec-item>
+      </div>
+    </div>
+
+    <div class="gpio-expander">
+      <div class="gpio-bar ftext" (click)="showAllGPIO()" >
+        <span [class.rotate-45]="expandAll == false" class="sign material-icons">
+          expand_more
+        </span>
+        <span class="gpio-bar-text">Show All GPIO</span>
+      </div>
+      <div [class.expand] = "expandAll == true" class="gpio-spec-container">
+        <pi-gpio-spec-item
+        *ngFor = "let gpio of gpioList"
+        [gpio] = gpio
+        ></pi-gpio-spec-item>
+      </div>
+    </div>
+  </main>
+</div>
+

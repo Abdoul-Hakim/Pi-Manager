@@ -1,0 +1,53 @@
+@import '../../../../assets/stylehelper/stylehelper'
+@import '../../../../assets/stylehelper/font'
+
+$midnight-blue: #000A64
+$med-spring: #00FFB0
+$light-coral: #EF6F6C
+$med-aquamarine: #56D2A9
+$max-yr: #FFBA49
+$light-cyan: #D6FFF6
+$turqoise: #37EAD7
+$header: #30E8D3
+
+@media screen and ( max-width: 450px )
+
+  :host
+    .container
+      margin-top: 10px
+      margin-bottom: 10px
+      width: 100%
+      display: flex
+      justify-content: center
+      align-items: center
+
+    .gpio
+      height: 50px
+      width: 70%
+      font-size: 20px
+      border: 2px solid $midnight-blue
+      color: $midnight-blue
+      display: grid
+      grid-template-rows: 100%
+      grid-template-columns: 50% 50%
+      border-radius: 5px
+      background-color: #fff
+
+    .gpio *
+      display: inline-flex
+      justify-self: center
+      align-self: center
+
+    .gpio-signal-ball
+      height: 80%
+      width: 40%
+      border-radius: 50px
+      border: 1px solid $midnight-blue
+
+    .gpio-on
+      background-color: $med-spring
+
+    .gpio-off
+      background-color: $light-coral
+
+

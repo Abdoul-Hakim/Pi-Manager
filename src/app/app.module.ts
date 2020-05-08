@@ -18,6 +18,7 @@ import { SnapshotsComponent } from './system/snapshots/snapshots.component';
 import { SnapshotcreatorComponent } from './system/snapshots/snapshotcreator/snapshotcreator.component';
 import { SnapshotItemComponent } from './system/snapshots/snapshot-item/snapshot-item.component';
 import { GpioSpecsComponent } from './system/gpio-specs/gpio-specs.component';
+import { GpioSpecItemComponent } from './system/gpio-specs/gpio-spec-item/gpio-spec-item.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { GpioSpecsComponent } from './system/gpio-specs/gpio-specs.component';
     SnapshotsComponent,
     SnapshotcreatorComponent,
     SnapshotItemComponent,
-    GpioSpecsComponent
+    GpioSpecsComponent,
+    GpioSpecItemComponent
   ],
   imports: [
     BrowserModule,

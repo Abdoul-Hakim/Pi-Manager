@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: 'debug', component: DebugComponent },
   { path: 'system/snapshots', component: SnapshotsComponent },
   { path: 'system/snapshots/creator', component: SnapshotcreatorComponent },
-  { path: 'system/snapshots/gpiospecs', component: GpioSpecsComponent },
+  { path: 'system/gpiospecs', component: GpioSpecsComponent },
 
 ]
 

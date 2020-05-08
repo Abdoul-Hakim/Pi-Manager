@@ -1,0 +1,8 @@
+<div class="container">
+  <div class="gpio ftext">
+    <span>{{ gpio.bcm }}</span>
+    <div [class.gpio-on]="gpio.status == true"
+         [class.gpio-off]="gpio.status == false"
+          class="gpio-signal-ball "></div>
+  </div>
+</div>
