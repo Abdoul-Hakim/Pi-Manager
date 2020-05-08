@@ -12,7 +12,7 @@ import { DesignService } from '../design.service';
 export class AsideBarComponent implements OnInit {
 
   selected;
-  rotated: boolean;
+  rotated: boolean = false;
 
   constructor(private $rotator: DesignService) {
   }
@@ -44,6 +44,7 @@ export class AsideBarComponent implements OnInit {
 
   selectElement( elem: BarElement ){
     this.selected = elem;
+    this.rotated = false;
   }
 
 }

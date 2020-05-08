@@ -14,6 +14,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { SpecsComponent } from './system/specs/specs.component';
 import { SpecsItemComponent } from './system/specs/specs-item/specs-item.component';
+import { SnapshotsComponent } from './system/snapshots/snapshots.component';
+import { SnapshotcreatorComponent } from './system/snapshots/snapshotcreator/snapshotcreator.component';
+import { SnapshotItemComponent } from './system/snapshots/snapshot-item/snapshot-item.component';
+import { GpioSpecsComponent } from './system/gpio-specs/gpio-specs.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +31,11 @@ import { SpecsItemComponent } from './system/specs/specs-item/specs-item.compone
     DebugComponent,
     HomeComponent,
     SpecsComponent,
-    SpecsItemComponent
+    SpecsItemComponent,
+    SnapshotsComponent,
+    SnapshotcreatorComponent,
+    SnapshotItemComponent,
+    GpioSpecsComponent
   ],
   imports: [
     BrowserModule,
@@ -36,6 +44,6 @@ import { SpecsItemComponent } from './system/specs/specs-item/specs-item.compone
   ],
   providers: [],
   bootstrap: [AppComponent],
-  exports: [DesignComponent, AsideBarComponent, HeaderComponent, SystemComponent, ProjectsComponent, DebugComponent, HomeComponent]
+  exports: [DesignComponent, AsideBarComponent, HeaderComponent, SystemComponent, ProjectsComponent, DebugComponent, HomeComponent, GpioSpecsComponent]
 })
 export class AppModule { }

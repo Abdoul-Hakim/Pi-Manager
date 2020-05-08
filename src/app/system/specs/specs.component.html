@@ -1,12 +1,49 @@
-<div class="btn-ctrl">
-  <button type="button" class="mpb-0 btn-snap" >
-    <span class="m-0 sign material-icons">
-      add
-    </span>
-    <span class="m-0 btn-text">New Snapshot</span>
-  </button>
+<div class="ip-bar">
+  <span class="mtext">IP-Address</span>
+  <span  class="mtext">0.0.0.0</span>
 </div>
+
+<div class="btn-ctrl">
+  <div class="btn-container">
+    <a class="mlink" routerLink="/system/snapshots/creator" routerLInkActive="active">
+      <span class="m-0 sign material-icons">
+        add
+      </span>
+      <button type="button" class="mpb-0 btn-snap" >
+        <span class="m-0 btn-text">New Snapshot</span>
+      </button>
+    </a>
+  </div>
+  <div class="btn-container">
+    <a class="mlink"  routerLink="/system/snapshots" routerLInkActive="active">
+      <span class="m-0 sign material-icons">
+        get_app
+      </span>
+      <button type="button" class="mpb-0 btn-snap" >
+        <span class="m-0 btn-text">Load Snapshot</span>
+      </button>
+    </a>
+  </div>
+</div>
+<div class="gpio-info-container">
+  <div class="gpio-bar" (click)="toggleInfo()">
+    <div class="gpio-btn">
+      <span [class.rotate-45]="showInfo == true" class="m-0 sign material-icons">
+        add
+      </span>
+      <button class="mpb-0 mtext">
+        {{ showInfo ? 'Hide' : 'Show' }} gpio data
+      </button>
+    </div>
+  </div>
+  <div [class.show-info]="showInfo == true" class="gpio-info mtext">
+
+  </div>
+</div>
+
 <pi-specs-item
   *ngFor="let spec of specifications"
   [spec] = spec
 ></pi-specs-item>
+
+

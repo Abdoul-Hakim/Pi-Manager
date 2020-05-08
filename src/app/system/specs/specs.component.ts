@@ -27,9 +27,19 @@ export class SpecsComponent implements OnInit {
     }
   ];
 
+  showInfo = false;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  toggleInfo(){
+    if (this.showInfo === false){
+      this.showInfo = true;
+    } else {
+      this.showInfo = false;
+    }
   }
 
 }
